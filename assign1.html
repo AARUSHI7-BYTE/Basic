@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card</title>
+    <style>
+        .container{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: repeat(3,auto);
+            background-color: white;
+            width: 100vw;
+            height: 100vh;
+        }
+        .box{
+            width: 250px;
+            height: 100px;
+            box-shadow: 0px 3px 5px rgb(238, 214, 184); ;
+            background-color: white;
+            margin: 50px 15px 20px 10px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            justify-content: center;
+        }
+        h1{
+            font-size: 15px;
+            margin: 10px;
+        }
+        .hi{
+            margin: 10px;
+            color: rgb(110, 63, 22);
+        }
+        p{
+            font-size: smaller;
+            color: rgb(67, 64, 64);
+            margin: 10px;
+        }
+        .saath{
+            display: flex;
+            justify-content: space-between;
+        }
+        @media(max-width:1024px) {
+            .container{
+                grid-template-columns: repeat(2,1fr);
+            }
+            
+        }
+        @media(max-width:600px) {
+            .container{
+                grid-template-columns: repeat(1,1fr);
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+             <div class="saath"><h1>Cappuccino</h1>
+             <span class="hi">$49</span>
+             </div>
+            <p>Usage of internet is becoming more common due to rapid advance</p>
+        </div>
+        <div class="box">
+            <div class="saath">
+            <h1>Americano</h1>
+            <span class="hi">$49</span>
+            </div>
+            <p>Usage of internet is becoming more common due to rapid advance</p>
+        </div>
+        <div class="box">
+            <div class="saath">
+             <h1>Espresso</h1>
+             <span class="hi">$49</span>
+             </div>
+            <p>Usage of internet is becoming more common due to rapid advance</p>
+        </div>
+        <div class="box">
+            <div class="saath">
+             <h1>Macchiato</h1>
+             <span class="hi">$49</span>
+             </div>
+            <p>Usage of internet is becoming more common due to rapid advance</p>
+        </div>
+        <div class="box">
+            <div class="saath">
+             <h1>Mocha</h1>
+             <span class="hi">$49</span>
+             </div>
+            <p>Usage of internet is becoming more common due to rapid advance</p>
+        </div>
+        <div class="box">
+            <div class="saath">
+             <h1>Coffee Latte</h1>
+             <span class="hi">$49</span>
+             </div>
+            <p>Usage of internet is becoming more common due to rapid advance</p>
+        </div>
+        <div class="box">
+            <div class="saath">
+             <h1>Piccolo latte</h1>
+             <span class="hi">$49</span>
+             </div>
+            <p>Usage of internet is becoming more common due to rapid advance</p>
+        </div>
+        <div class="box">
+            <div class="saath">
+             <h1>Ristretto</h1>
+             <span class="hi">$49</span>
+             </div>
+            <p>Usage of internet is becoming more common due to rapid advance</p>
+        </div>
+        <div class="box">
+            <div class="saath">
+             <h1>Affogato</h1>
+             <span class="hi">$49</span>
+             </div>
+            <p>Usage of internet is becoming more common due to rapid advance</p>
+        </div>
+    </div>
+</body>
+</html>
