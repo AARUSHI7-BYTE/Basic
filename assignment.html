@@ -1,77 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>weekly schedule</title>
     <style>
+        .container {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-rows: repeat(11, auto);
+        }
 
+        .box4 {
+            grid-column: 2;
+
+        }
+
+        .box3 {
+            grid-column: 3;
+        }
+
+        .box5 {
+            grid-column: 4;
+        }
+
+        .box6 {
+            grid-column: 5;
+        }
+
+        .box7 {
+            grid-column: 6;
+        }
+
+        .box1 {
+            background-color: pink;
+            border-radius: 50%;
+            width: 50px;
+            height: 35px;
+            margin: 5px 10px 10px 10px;
+            align-content: center;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+
+        .boxTIME {
+            grid-column: 1;
+            background-color: lightblue;
+            border-radius: 50%;
+            width: 50px;
+            height: 35px;
+            margin: 5px 10px 10px 10px;
+            align-content: center;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+
+        }
+
+        .box2 {
+            background-color: rgb(247, 247, 182);
+            border-radius: 50%;
+            width: 50px;
+            height: 35px;
+            margin: 5px 10px 10px 10px;
+            align-content: center;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+
+        .boxnote {
+            grid-column: 1/span 6;
+            height: 35px;
+            background-color: lightblue;
+            border-radius: 20px;
+            font-size: smaller;
+            bottom: 10px;
+            left: 10px;
+        }
+        .note{
+            margin: 8px 0px 0px 6px;
+        }
     </style>
 </head>
+
 <body>
     <h1> ⭐️ WEEKLY SCHEDULE</h1>
     <div class="container">
-        <div class="box1">Monday</div>
-        <div class="box2">Tuesday</div>
-        <div class="box1">Wednesday</div>
-        <div class="box2">Thursday</div>
-        <div class="box">Friday</div>
+        <div class="box4">Monday</div>
+        <div class="box3">Tuesday</div>
+        <div class="box5">Wednesday</div>
+        <div class="box6">Thursday</div>
+        <div class="box7">Friday</div>
         <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
+        <div class="boxTIME">8:00</div>
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box1"></div>
+        <div class="boxTIME">9:00</div>
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box1"></div>
+        <div class="boxTIME">10:00</div>
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box1"></div>
+        <div class="boxTIME">11:00</div>
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box1"></div>
+        <div class="boxTIME">12:00</div>
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box1"></div>
+        <div class="boxTIME">13:00</div>
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box1"></div>
+        <div class="boxTIME">14:00</div>
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box1"></div>
+        <div class="boxTIME">15:00</div>
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box1"></div>
+        <div class="boxTIME">16:00</div>
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box1"></div>
+        <div class="boxnote">
+            <div class="note"><b>NOTE:
+               </b></div>
+            </div>
     </div>
-    
+
 </body>
+
 </html>
