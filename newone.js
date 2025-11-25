@@ -12,7 +12,7 @@ input.forEach(item=>{
     }
 });
 
-//13 question
+//12 question
 const students =  [ { "name": "Alice", "marks": 58 },
   { "name": "Bob", "marks": 85 },
   { "name": "Charlie", "marks": 92 },
@@ -34,3 +34,22 @@ function getstudentnames(students){
 }
 const result = getstudentnames(students);
 console.log(result);
+
+//13
+const items=  ["electronics", "clothing", "electronics", "toys", "clothing", "toys", "toys"];
+
+const counts = items.reduce((acc,items)=>{
+    acc[items]=(acc[items]||0)+1;
+    return acc;
+},{});
+
+console.log(counts);
+
+const sortedCategories = Object.entries(counts)
+  .sort((a, b) => b[1] - a[1])
+  .map(entry => entry[0]);      
+
+console.log(sortedCategories);
+
+
+
