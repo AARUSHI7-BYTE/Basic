@@ -156,3 +156,15 @@ const user = {
 };
 console.log(user.address.city);
 console.log(user.job.title);
+
+const obj1 = { a: 1, b: 2, c: 3 };
+const obj2 = { b: 20, d: 4 };
+
+const merged = {
+  ...obj1,
+  ...obj2,
+  b: 999 
+};
+
+console.log(merged);
+// { a: 1, b: 999, c: 3, d: 4 }
