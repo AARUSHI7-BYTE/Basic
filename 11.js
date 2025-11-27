@@ -23,3 +23,10 @@ setTimeout(()=>{
     clearInterval(id);
     console.log("Loaded successfully!")},5000);
 
+//14
+console.log("Begin"); 
+setTimeout(() => { console.log("Timeout Task"); }, 0);
+Promise.resolve().then(() => { console.log("Promise Task"); }); console.log("End");
+//it follows such because begin and end has no delay they are direct, timeout is there for timeout task and hence it is delayed, promise task is microtask and it has more priority.
+
+//15
