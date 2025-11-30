@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 200px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <h1 id="dom">Welcome</h1>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit delectus adipisci aliquam. Saepe omnis a, itaque praesentium exercitationem ea consequatur.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, aperiam?</p>
+    <button onclick="changeclick()">click me</button>
+    </div>
+</body>
+<script>
+    function changeclick(){
+    let dom = document.getElementById("dom");
+    dom.textContent="Welcome to the DOM World!";
+    let para = document.getElementsByTagName("p");
+    for(let p of para){
+    p.style.backgroundColor="blue";
+    }
+    let selection = document.querySelector(".container");
+    selection.style.background="black";
+    selection.style.color="white";
+    }
+</script>
+</html>
