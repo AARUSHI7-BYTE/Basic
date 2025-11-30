@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>assignment</title>
+</head>
+<body>
+    <input type="text" placeholder="type color name" id="coloring">
+    <input type="text" placeholder="type your text" id="update">
+    <button id="background">Change background</button>
+    <button id="text">Update Text</button>
+    <div id="color">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, sed.</div>
+</body>
+<script>
+    document.getElementById("background").addEventListener("click",function(){
+        const change = document.getElementById("coloring").value;
+        document.body.style.background= change;
+        document.getElementById("color").style.background=change;
+        if (change==null) {
+            alert("Invalid color name!")
+            
+        }
+    })
+
+    document.getElementById("text").addEventListener("click",function(){
+        const textchange = document.getElementById("update").value;
+        if(textchange==""){
+            alert("Please enter some text!");
+        }
+        document.getElementById("color").textContent=textchange;
+    })
+    </script>
+</html>

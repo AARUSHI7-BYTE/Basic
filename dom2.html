@@ -12,13 +12,6 @@
         <li>lime fruits</li>
     </ul>
     <button id="btn">ADD</button>
-
-
-    <input type="text" placeholder="type color name">
-    <input type="text" placeholder="type text content">
-    <button id="background">Change background</button>
-    <button>Update Text</button>
-    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, itaque?</div>
 </body>
 <script>
     document.getElementById("btn").addEventListener("click",function(){
@@ -26,10 +19,6 @@
         const li = document.createElement('li');
         li.textContent="New item";
         ul.appendChild(li);
-    })
-    document.getElementById("background").addEventListener("click",function(){
-        document.body.style.background="black";
-        document.div.style.color="white";
     })
 
 </script>
