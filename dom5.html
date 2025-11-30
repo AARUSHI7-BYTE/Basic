@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>assignment</title>
+</head>
+<body>
+    <input type="text" placeholder="type a task" id="task">
+    <button id="btn">Add Task</button>
+    <ul id="ul">
+        <button id="delete">Delete</button>
+        <button id="Completed">Completed</button>
+    </ul>
+</body>
+<script>
+    const ul = document.getElementById("ul");
+    const li = document.createElement("li");
+    document.getElementById("btn").addEventListener("click",function(){
+        const texting = document.getElementById("task").value;
+        li.textContent=texting;
+        ul.appendChild(li);
+    })
+    document.getElementById("delete").addEventListener("click",function(){
+        ul.removeChild(li);
+
+    })
+    document.getElementById("Completed").addEventListener("click",function(){
+        const texting = document.getElementById("task").value;
+        li.textContent=texting;
+        li.style.textDecoration="line-through";
+    })
+
+
+</script>
+</html>
