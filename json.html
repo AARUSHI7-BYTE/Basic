@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>assignment</title>
+</head>
+<body>
+    <button onclick="add()">Add paragraph</button>
+    <button onclick="Remove()">Remove paragraph</button>
+</body>
+<script>
+    function add(){
+        const get = document.createElement("div");
+        get.textContent="This is a new paragraph";
+        document.body.appendChild(get);
+    }
+
+    function Remove(){
+       const lastDiv = document.body.querySelector("div");
+
+        if (lastDiv) {
+            document.body.removeChild(lastDiv);
+        }
+    }
+</script>
+</html>
