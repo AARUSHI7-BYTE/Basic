@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>notes area</h2>
+    <textarea name="" id="text"></textarea>
+    <button onclick="saves()">Saves Data</button>
+    <button onclick="load()">loads Data</button>
+    <button onclick="clearnotes()"> Clear Data</button>
+    <div>
+        <p id="mssg"></p>
+    </div>
+</body>
+<script>
+    const STORAGE_KEY = "notes";
+    function saves(){
+        const text = document.getElementById("text").value.trim();
+        const p = document.getElementById("mssg");
+        if(text==""){
+            p.textContent="Please put text";
+            p.style.color="red";
+        }
+        localStorage.setItem(STORAGE_KEY,text);
+        p.textContent="notes saved";
+    }
+
+    function load() {
+        const text = document.getElementById("text");
+        const p = document.getElementById("mssg");
+        const got = localStorage.getItem(STORAGE_KEY)
+        if (got) {
+            p.textContent = "Notes loaded";
+            p.style.color = "green";
+        }
+        else {
+            p.textContent = "no notes saved";
+            p.style.color = "red";
+        }
+
+    }
+    function clearnotes() {
+        localStorage.removeItem(STORAGE_KEY);
+        const p = document.getElementById("mssg");
+        p.textContent = "notes cleared";
+        p.style.color="green";
+
+    }
+</script>
+
+</html>
