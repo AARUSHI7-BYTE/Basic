@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODOLIST</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 150px;
+            background-color: aqua;
+        }
+        .container{
+            border: 2px solid black;
+            width: 30vw;
+            height: 50vh;
+            background-color: white;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <h1>TO-DO LIST</h1>
+    <br>
+    <input type="text" id="texting" placeholder="type task">
+    <input type="search" placeholder="Search tasks">
+    <br>
+    <ul id="list"></ul>
+    <br>
+    <button onclick="task()">Add Task</button>
+    <button onclick="complete()">Completed</button>
+    <button onclick="removed()">Remove</button>
+    </div>
+</body>
+<script>
+    const STORAGE_KEY="tasks";
+    let tasks = JSON.parse(localStorage.getItem(STORAGE_KEY))||[];
+    function task(){
+    const ul = document.getElementById("list");
+    const li=document.createElement("li");
+    const text = document.getElementById("texting").value.trim();
+    li.textContent=text;
+    ul.appendChild(li);
+    localStorage.setItem(STORAGE_KEY,li);
+
+    }
+    function complete(){
+        const get = localStorage.getItem(STORAGE_KEY);
+        if(get){
+            selectedli.style.textdecoration="line-through";
+        }
+        else{
+            alert("Nothing saved");
+        }
+
+    }
+    function remove(){
+        const get = localStorage.getItem(STORAGE_KEY);
+        const ul = document.getElementById("list");
+        ul.removeChild(li);
+    }
+
+</script>
+</html>

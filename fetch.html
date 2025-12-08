@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetching</title>
+    <h3>TODO</h3>
+    <div id="container"></div>
+    <button onclick="fetching()">Fetched data</button>
+</head>
+<body>
+    <script>
+         const STORAGE_KEY = "todos";
+        function fetching(){
+            fetch("https://jsonplaceholder.typicode.com/todos",{
+                method:"GET",
+            })
+            .then(res=>res.json())
+            .then((data)=>{
+                const first20 = data.slice(0,20);
+                localStorage.setItem(STORAGE_KEY,JSON.stringify(first20));
+                renderTodos();
+            })
+            .catch((err) => {
+            console.error("Error fetching todos:", err);
+            showMessage("Failed to fetch todos. Check console for details.");
+        });
+        }
+        function gettodos(){
+            return JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
+        }
+
+        function renderTodos(){
+            const todos = gettodos();
+            const container = document.getElementById("container");
+            container.innerHTML = "";
+              if (todos.length === 0) {
+                container.innerHTML = "<p>No Todos Available</p>";
+                return;
+            }
+              todos.forEach(todo => {
+                const div = document.createElement("div");
+                div.innerHTML = `
+                    <p>
+                        <strong>${todo.title}</strong> 
+                        - ${todo.completed ? "Completed" : "Pending"}
+                        <button onclick="deleteTodo(${todo.id})">Delete</button>
+                    </p>
+                `;
+                container.appendChild(div);
+            });
+        }
+
+
+        function deleteTodo(id) {
+            let todos = gettodos();
+            todos = todos.filter(t => t.id !== id);
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(todos));
+            renderTodos();
+        }
+
+        renderTodos();
+    </script>
+</body>
+</html>
+
+
